@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Pipeline Benchmarking"
+  short_description: "Benchmark main vs branch pipeline outputs"
+  default_prompt: "Use $data-pipeline-benchmarking to compare outputs from main and a feature branch with products selectable pipeline."
