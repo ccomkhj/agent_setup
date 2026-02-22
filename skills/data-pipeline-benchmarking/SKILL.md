@@ -21,14 +21,14 @@ Run both branches sequentially against the same canonical path, snapshot each ru
 1. Set a fixed benchmark context.
 
 ```bash
-CLIENT="pamo-design"
+CLIENT="e-comerce-1"
 ENV="dev"
 DS="2026-02-11"
 FEATURE_BRANCH="dse-670-my-change"
 SCHEMA_VERSION="1"
 
 BENCH_ID="$(date +%Y%m%d-%H%M%S)-${CLIENT}-${DS}"
-BUCKET="voids-pipeline-${ENV}"
+BUCKET="bucket-name-${ENV}"
 CANONICAL_BASE="s3://${BUCKET}/${CLIENT}"
 BENCH_BASE="s3://${BUCKET}/benchmark-runs/${BENCH_ID}"
 
@@ -159,6 +159,6 @@ done
 ## Expected Result
 - Canonical output path is reused only during execution.
 - Snapshot paths preserve branch-specific results:
-  - `s3://voids-pipeline-${ENV}/benchmark-runs/${BENCH_ID}/main/...`
-  - `s3://voids-pipeline-${ENV}/benchmark-runs/${BENCH_ID}/feature/...`
+  - `s3://bucket-name-${ENV}/benchmark-runs/${BENCH_ID}/main/...`
+  - `s3://bucket-name-${ENV}/benchmark-runs/${BENCH_ID}/feature/...`
 - Manifest diff shows per-entity differences in row counts and model versions.
