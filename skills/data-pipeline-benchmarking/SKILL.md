@@ -37,7 +37,7 @@ MAIN_WT="${WT_DIR}/benchmark-main"
 FEATURE_WT="${WT_DIR}/benchmark-${FEATURE_BRANCH//\//-}"
 ```
 
-2. Create isolated worktrees (pattern from `using-git-worktrees`).
+2. Create isolated worktrees (pattern from skill `using-git-worktrees`).
 
 ```bash
 # Ensure project-local worktree dir is ignored
